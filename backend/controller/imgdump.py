@@ -1,10 +1,8 @@
 import os
 
 def imglista ():
-    palautettava = []
+    palautettava = ""
 
     for img in os.listdir("../frontend/Image_dump"):
-        img_path = os.path.join("../frontend/Image_dump", img)
-        palautettava.append(img_path)
-
+        palautettava += f'<img src="{os.path.join("/Image_dump", img)}" alt "random ass img">'
     return palautettava
