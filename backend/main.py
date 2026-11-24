@@ -4,4 +4,4 @@ app = Flask(__name__, static_folder="../frontend", static_url_path="")
 def sivusto():
     return send_from_directory("../frontend", "etusivu.html")
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
