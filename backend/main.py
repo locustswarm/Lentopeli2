@@ -1,5 +1,6 @@
 
 from flask import Flask, send_from_directory, request, jsonify
+import controller.imgdump as imgdump
 app = Flask(__name__, static_folder="../frontend", static_url_path="")
 @app.route("/")
 def sivusto():
@@ -14,7 +15,7 @@ def viestimies():
 
         case "imgdump.html":
 
-            return jsonify(result=f"{data['lähetysarvo']} on sinun nettiosoite.")
+            return jsonify(result=f"{imgdump.imglista()}")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
