@@ -10,3 +10,4 @@ function lähetä_viesti(saatuarvo = window.location.href) {
         }
     });
 }
+lähetä_viesti();
