@@ -11,11 +11,12 @@ def viestimies():
     match data['lähetysarvo'].split("/")[-1]:
         case "etusivu.html":
 
-            return jsonify(result=f"{data['lähetysarvo']} on sinun nettiosoite.")
+            return jsonify(result="<img src= Image_dump/hylics_wayne.gif>")
 
         case "imgdump.html":
 
             return jsonify(result=f"{imgdump.imglista()}")
-
+        case "paavalikko.html":
+            pass
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
