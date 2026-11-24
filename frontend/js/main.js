@@ -1,5 +1,5 @@
-function flaskiviesti() {
-var saatuarvo = document.getElementById('annettu').value;
+
+var saatuarvo = window.location.href;
 $.ajax({url:'/viestikanava',type: 'POST',contentType: 'application/json',
 data: JSON.stringify({ 'lähetysarvo': saatuarvo }),
 success: function(response) {
@@ -8,4 +8,3 @@ error: function(error) {
 console.log(error);
 }
 });
-}
