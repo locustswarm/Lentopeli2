@@ -4,7 +4,8 @@ co2_max int(8),
 current_co2 int(8),
 gamertag varchar(30),
 location varchar(40),
-moneys int(8), 
+moneys int(8),
+shotgun int(8), 
 primary key(id),
 foreign key (location) references airport(ident)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
